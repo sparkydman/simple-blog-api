@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "c3e3576a-5ae7-4e6d-b8e3-e658800e90cf",
+		"name": "Simple blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"firstname\":\"test\",\r\n    \"lastname\":\"one\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"firstname\":\"test\",\r\n    \"lastname\":\"one\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jame@gmail.com\",\r\n    \"firstname\":\"james\",\r\n    \"lastname\":\"carter\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/611c2927328a9289b427caed",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"611c2927328a9289b427caed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jame@gmail.com\",\r\n    \"firstname\":\"james\",\r\n    \"lastname\":\"bond\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/611c2927328a9289b427caed",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"611c2927328a9289b427caed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jame@gmail.com\",\r\n    \"firstname\":\"james\",\r\n    \"lastname\":\"bond\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/611c2fcece9dcd2c14fb5a3b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"611c2fcece9dcd2c14fb5a3b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "Add post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title ten\",\r\n    \"body\":\"This is the title ten body\",\r\n    \"author\":\"611c2927328a9289b427caed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/posts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title ten\",\r\n    \"body\":\"This is the title ten body\",\r\n    \"author\":\"611c2927328a9289b427caed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/posts",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title ten\",\r\n    \"body\":\"This is the title ten body\",\r\n    \"author\":\"611c2927328a9289b427caed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/posts/611c3a07e1f57b7f24f38a31",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"posts",
+								"611c3a07e1f57b7f24f38a31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title four update\",\r\n    \"body\":\"This is the title four body update\",\r\n    \"author\":\"611c2927328a9289b427caed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/posts/611c3a07e1f57b7f24f38a31",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"posts",
+								"611c3a07e1f57b7f24f38a31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Title four update\",\r\n    \"body\":\"This is the title four body update\",\r\n    \"author\":\"611c2927328a9289b427caed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/posts/611c3caa39633c6e4c06b7c9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"posts",
+								"611c3caa39633c6e4c06b7c9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "Add comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"This post is very nice and clear\",\r\n    \"author\":\"611c28e4328a9289b427cae7\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/comments/611c39c2e1f57b7f24f38a2b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"611c39c2e1f57b7f24f38a2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all post comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"interesting post\",\r\n    \"author\":\"611c28fe328a9289b427caea\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/comments/611c39c2e1f57b7f24f38a2b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"611c39c2e1f57b7f24f38a2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a comment",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"interesting post\",\r\n    \"author\":\"611c28fe328a9289b427caea\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/comments/611c411ab465ff32e82c5d6a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"611c411ab465ff32e82c5d6a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"interesting post just for updated\",\r\n    \"author\":\"611c28fe328a9289b427caea\",\r\n    \"post\":\"611c39c2e1f57b7f24f38a2b\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/comments/611c42a74bab575b70f23941",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"611c42a74bab575b70f23941"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\":\"interesting post just for updated\",\r\n    \"author\":\"611c28fe328a9289b427caea\",\r\n    \"post\":\"611c39c2e1f57b7f24f38a2b\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/comments/611c42a74bab575b70f23941",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"comments",
+								"611c42a74bab575b70f23941"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
